@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+	int i = 0;
+	//int max = 0;
+	int arr[] = { -1,-2,-3,-4,-5,-6,-7,-8,-10,-9 };//1250与1251行有缺陷，此时数组内数字若为负数则会出现错误
+	int max = arr[0];
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	for (i = 0; i < sz; i++)
+	{
+		if (arr[i] > max)
+		{
+			max = arr[i];
+		}
+	}
+	printf("max = %d ", max);
+	return 0;
+}
